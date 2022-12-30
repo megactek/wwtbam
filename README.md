@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# Who Wants to Be a Millionaire?
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the "Who Wants to Be a Millionaire?" app, built using ReactJS! 
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+This app is a simple implementation of the popular game show "Who Wants to Be a Millionaire?", where players are presented with a series of increasingly difficult questions and must use their knowledge and intuition to progress through the game and potentially win a million dollars. 
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- A series of multiple choice questions, each with four possible answers
+- The ability to use lifelines (50/50, ask the audience, and call a friend) to help narrow down the correct answer
+- A running total of the player's winnings as they progress through the game
+- An interactive game show-inspired interface
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+To get started with the app, clone the repository and install the dependencies:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+git clone https://github.com/megactek/wwtbam.git
+cd wwtbam
+npm install
+```
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Next, start the development server:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```npm start```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+The app will now be running at http://localhost:3000/.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Adding Questions
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To add your own questions to the game, open the `questions.json` file in the root of the project and add an object for each question. The object should have the following structure:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+{
+"question": "What is the capital of France?",
+"answers": [
+"Paris",
+"London",
+"Rome",
+"Berlin"
+],
+"correctAnswer": "Paris"
+}
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The `question` field should contain the question text, the `answers` field should contain an array of possible answers, and the `correctAnswer` field should contain the correct answer. 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contributing
 
-### Code Splitting
+If you'd like to contribute to the project, please fork the repository and make your changes in a separate branch. Once you're ready to submit your changes, open a pull request and we'll review your code before merging it into the main branch. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## License
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
